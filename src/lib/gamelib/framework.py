@@ -18,9 +18,27 @@ import os,sys
 sys.path.append(os.path.abspath('src/lib/'))
 from gamelib.shortcode import *
 
-class question:
+
+class Util:
+  def make(question,answer,answerlist=False):
+    global response
+    '''Makes a question
+    question    - value with the question
+    answer      - The value or string that is the answer
+    answerlist  - Shows an answer list if used (optional)'''
+    if answerlist != False:
+      pnt(question)
+      [print(i) for i in answerlist]
+      response = inpt('''-----
+Please type your response below:
+> ''')
+    else:
+      pnt(question)
+      response = inpt('''Please type your response below:
+> ''')
+class Question:
   '''Questions class'''
-  class util:
-    def make():
-      '''Makes a question'''
-      pnt('')
+  One = 'This is an example question'
+class Answer:
+  '''Answers class'''
+  One = 'a'

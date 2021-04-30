@@ -21,7 +21,7 @@
 
 import os,sys
 sys.path.append(os.path.abspath('src/lib/'))
-from gamelib.shortcode import *
+from gamelib.framework import *
 
 while True:
   clr()
@@ -35,7 +35,7 @@ while True:
 |==========================|
 > ''',green))
   if choice == '1':
-    pnt('none')
+    Util.make(Question.One,Answer.One,answerlist=['a','b','c','d'])
   if choice == '2':
     inpt(color('''
 CREDITS:
