@@ -73,3 +73,5 @@ Modules used: termcolor   - https://pypi.org/project/termcolor/
 
 Press enter to go back to title
 ''',green))
+  if choice == '3':
+    exit(0)
