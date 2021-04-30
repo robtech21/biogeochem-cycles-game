@@ -19,19 +19,9 @@
 
 
 
-from os import system
-from termcolor import colored
-
-def clr():
-    '''Clear screen function'''
-    system('clear')
-
-# Shortcode functions
-pnt   = print
-inpt  = input
-color = colored
-green = 'green'
-red   = 'red'
+import os,sys
+sys.path.append(os.path.abspath('src/lib/'))
+from gamelib.shortcode import *
 
 while True:
   clr()

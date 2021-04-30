@@ -1,5 +1,4 @@
-'''
-#    Shortcode library for biogeochemical cycles game
+#    framework library for biogeochemical cycles game
 #    Copyright (C) 2021  Robert Furr
 #
 #    This program is free software: you can redistribute it and/or modify
@@ -14,4 +13,14 @@
 #
 #    You should have received a copy of the GNU General Public License
 #    along with this program.  If not, see <https://www.gnu.org/licenses/>.
-'''
+
+import os,sys
+sys.path.append(os.path.abspath('src/lib/'))
+from gamelib.shortcode import *
+
+class question:
+  '''Questions class'''
+  class util:
+    def make():
+      '''Makes a question'''
+      pnt('')
