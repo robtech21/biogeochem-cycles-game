@@ -20,8 +20,9 @@
 
 
 import os,sys
-sys.path.append(os.path.abspath('src/lib/'))
+#sys.path.append(os.path.abspath('src/lib/'))
 from gamelib.framework import *
+from gamelib.maingame import *
 
 while True:
   clr()
@@ -35,13 +36,20 @@ while True:
 |==========================|
 > ''',green))
   if choice == '1':
-    Util.make(Question.One,Answer.One,answerlist=['a','b','c','d'])
+    clr()
+    Game.testgame()
   if choice == '2':
+    clr()
     inpt(color('''
-CREDITS:
+Biogeochemical Cycles Game
 
-Developer:    Robert Furr - https://github.com/robtech21
-Modules used: termcolor   - https://pypi.org/project/termcolor/
+|===================================================|
+|CREDITS:                                           |
+|                                                   |
+|Developer:                          - Robert Furr  |
+|Co-Developer:                       - Cody Dennis  |
+|Writer for questions and scenarios: - Ethan Eberly |
+|===================================================|
 
     License:
 
@@ -64,4 +72,5 @@ Modules used: termcolor   - https://pypi.org/project/termcolor/
 Press enter to go back to title
 ''',green))
   if choice == '3':
+    pnt(color('Come again soon!',green))
     exit(0)

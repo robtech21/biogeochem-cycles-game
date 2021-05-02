@@ -4,3 +4,4 @@ lib/gamelib/__pycache__
 lib/gamelib/__pycache__/*
 src/lib/gamelib/__pycache__/framework.cpython-38.pyc
 src/lib/gamelib/__pycache__/shortcode.cpython-38.pyc
+.backup/
