@@ -17,6 +17,7 @@
 '''
 
 import os,sys
+#sys.path.append(os.path.abspath('src/lib/'))
 from gamelib.framework import *
 
 class Game:
@@ -29,14 +30,35 @@ class Game:
     inpt('There is no game\n')
 
   def testgame():
+    global questions_wrong,questions_right,score
     '''A test game to start'''
-#    questionInfo = Util.randQuestion()
-#    Util.make(questionInfo[0],questionInfo[1],questionInfo[2])
-    score = 0
+    # Key:
+    # 0 - Question number
+    # 1 - Question
+    # 2 - Answer
+    # 3 - Answer List
+    score             = 0
+    questions_wrong   = 0
+    questions_right   = 0
+    previousQuestion  = None
     while score < 10:
       clr()
-      pnt(color('Score: '+str(score),green))
       questionInfo = Util.randQuestion()
-      response = Util.make(questionInfo[0],questionInfo[1],questionInfo[2])
+      if questionInfo[0] != previousQuestion:
+        response = Util.make(questionInfo[1],questionInfo[2],questionInfo[3],Score=score)
+      if response == 0:
+        pnt(color('Incorrect :(',red))
+        pnt(color('The correct answer is: ',green)+color(questionInfo[2].upper(),cyan))
+      if response == 1:
+        pnt(color('Correct!',cyan))
       score = score + response
-      inpt(color('+'+str(response)+' points\nScore is now '+str(score)+'\nPress enter\n',green))
+      inpt(color('Press Enter\n',green))
+      
+
+    clr()
+    pnt(color('''Game Finished
+=====
+Stats:''',green))
+    pnt(color('Questions Wrong: '+questions_wrong,red))
+    pnt(color('Questions Right: '+questions_right,green))
+    inpt(color('=====\nPress enter to go to title\n',green))

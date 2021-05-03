@@ -31,14 +31,15 @@ while True:
 |Biogeochemical Cycles Game|
 |==========================|
 |1. Start                  |
-|2. Credits                |
-|3. Exit                   |
+|2  View Images            |
+|3. Credits                |
+|4. Exit                   |
 |==========================|
 > ''',green))
   if choice == '1':
     clr()
     Game.testgame()
-  if choice == '2':
+  if choice == '3':
     clr()
     inpt(color('''
 Biogeochemical Cycles Game
@@ -71,6 +72,9 @@ Biogeochemical Cycles Game
 
 Press enter to go back to title
 ''',green))
-  if choice == '3':
+  if choice == '4':
     pnt(color('Come again soon!',green))
     exit(0)
+  
+  if choice == '2':
+    inpt(color('Control+Click the following link to open and then press enter to go back to title\nhttps://robtech21.github.io/biogeochem-cycles-game/\n',green))

@@ -25,6 +25,7 @@ def clr():
 
 green = 'green'
 red   = 'red'
+cyan  = 'cyan'
 
 Print = print
 pnt   = print
