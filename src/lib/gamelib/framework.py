@@ -46,7 +46,7 @@ class Util:
     else:
       response = 0
     return response
-  def randQuestion():
+  def randQuestion(None):
     global questionInfo
     questionSelect  = random.randint(1,4)
     if questionSelect == 1:

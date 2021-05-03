@@ -1,8 +1,3 @@
-# Game page and development log (for class)
+# Game page
 
-Date|Update
-----|------
-4/29/21|Added title screen and some basic framework
-4/30/21|More framework
-4/1/21|Almost done with framework and started base game
-4/2/21|Framework is now stable and there is a test game
+[Development Log](devlog.md)
