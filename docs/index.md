@@ -1,3 +1,11 @@
 # Game page
 
-[Development Log](devlog.md)
+## Images
+
+![rock cycle](rockcycle.png)
+
+![water cycle](watercycle.png)
+
+
+
+[Development Log (For teacher viewing)](devlog.md)
