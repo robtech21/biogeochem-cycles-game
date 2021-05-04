@@ -37,28 +37,50 @@ class Game:
     # 1 - Question
     # 2 - Answer
     # 3 - Answer List
+    scorelimit        = 20
     score             = 0
     questions_wrong   = 0
     questions_right   = 0
     previousQuestion  = None
-    while score < 10:
-      clr()
+    pnt(color('Pre-Game Config',green))
+    choice = inpt(color('What score to play to? (Leave empty for default of 20)\n> ',green))
+    if choice != '':
+      try:
+        scorelimit = int(choice)    
+      except ValueError:
+        pass
+    while score < scorelimit:
+      if score < 0:
+        score = 0
       questionInfo = Util.randQuestion()
       if questionInfo[0] != previousQuestion:
         response = Util.make(questionInfo[1],questionInfo[2],questionInfo[3],Score=score)
-      if response == 0:
-        pnt(color('Incorrect :(',red))
-        pnt(color('The correct answer is: ',green)+color(questionInfo[2].upper(),cyan))
-      if response == 1:
-        pnt(color('Correct!',cyan))
-      score = score + response
-      inpt(color('Press Enter\n',green))
+        if response == 0:
+          questions_wrong = questions_wrong + 1
+          pnt(color('Incorrect :(',red))
+          pnt(color('The correct answer is: ',green)+color(questionInfo[2].upper(),cyan))
+          if random.randint(1,1000) == 1:
+            pnt(color("What's this? You didn't lose any points! :)",cyan))
+            score = score - 0
+          else:
+            score = score - 1
+        if response == 1:
+          questions_right = questions_right + 1
+          pnt(color('Correct!',cyan))
+          if random.randint(1,100) == 1:
+            pnt(color("What's this? Looks like you got an extra point! :)",cyan))
+            score = score + 2
+          else:
+            score = score + 1
+        inpt(color('Press Enter\n',green))
+        print('Test')
+      previousQuestion = questionInfo[0]
       
 
     clr()
     pnt(color('''Game Finished
-=====
-Stats:''',green))
-    pnt(color('Questions Wrong: '+questions_wrong,red))
-    pnt(color('Questions Right: '+questions_right,green))
-    inpt(color('=====\nPress enter to go to title\n',green))
+|=====
+|Stats:''',green))
+    pnt(color('|',green)+color('Questions Wrong: '+str(questions_wrong),red))
+    pnt(color('|',green)+color('Questions Right: '+str(questions_right),cyan))
+    inpt(color('|=====\nPress enter to go to title\n',green))

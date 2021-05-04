@@ -31,13 +31,14 @@ class Util:
     answerlist  - Shows an answer list if used (optional)'''
   
     if answerlist != False:
+
       while True:
         clr()
         if Score != None:
           pnt(color('Score: ',green)+color(str(Score),cyan))
         pnt(color(question+"\n|-----",green))
         for key in answerlist:
-          pnt(color('| '+key+': '+answerlist[key],green)) 
+          pnt(color('| ',green)+color(key+': '+answerlist[key],yellow)) 
         userinput = inpt(color('|-----\nPlease type your response below:\n> ',green))
         userinput = userinput.lower()
         if userinput != '':
@@ -70,10 +71,15 @@ class Util:
       QA.q5.list,
       QA.q6.list,
       QA.q7.list,
-      QA.q8.list
+      QA.q8.list,
+      QA.q9.list,
+      QA.q10.list
     ]
     list = random.choice(questionList)
     questionInfo = list
+
+    # All of this is here for debugging in case it breaks again
+
     #pnt('Question Num:  '+questionInfo[0])
     #pnt('Question:      '+questionInfo[1])
     #pnt('Answer:        '+questionInfo[2])
@@ -83,9 +89,9 @@ class Util:
     return questionInfo
 
 class QA:
-  '''Questions and answers class'''
+  '''Contains questions with data'''
   class null:
-    '''Null question for templating, do not use.'''
+    '''Null question as a template, do not use.'''
     num   = ''
     ques  = ''
     ans   = ''
@@ -182,5 +188,27 @@ class QA:
       'b':'Seperation',
       'c':'Subduction',
       'd':'Convergent'
+    }
+    list = [num,ques,ans,ans_dict]
+  class q9:
+    num   = '9'
+    ques  = 'What are the outputs of cellular respiration?'
+    ans   = 'a'
+    ans_dict = {
+      'a':'ATP, CO2, H2O',
+      'b':'ATP, Glucose, H20',
+      'c':'Glucose, O2',
+      'd':'02, H20'
+    }
+    list = [num,ques,ans,ans_dict]
+  class q10:
+    num   = '10'
+    ques  = "What is the type of organism that makes it's own food?"
+    ans   = 'c'
+    ans_dict = {
+      'a':'Heterotroph',
+      'b':'Organic',
+      'c':'Autotrouph',
+      'd':'Chloroplast'
     }
     list = [num,ques,ans,ans_dict]

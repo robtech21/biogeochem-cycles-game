@@ -23,9 +23,10 @@ def clr():
   '''Clears the screen'''
   system('clear')
 
-green = 'green'
-red   = 'red'
-cyan  = 'cyan'
+green   = 'green'
+red     = 'red'
+cyan    = 'cyan'
+yellow  = 'yellow'
 
 Print = print
 pnt   = print

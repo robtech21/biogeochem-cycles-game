@@ -49,7 +49,7 @@ Biogeochemical Cycles Game
 |                                                   |
 |Developer:                          - Robert Furr  |
 |Co-Developer:                       - Cody Dennis  |
-|Writer for questions and scenarios: - Ethan Eberly |
+|Writer of questions:                - Ethan Eberly |
 |===================================================|
 
     License:
