@@ -27,20 +27,22 @@ class Game:
     Util.make(questionInfo[0],questionInfo[1],questionInfo[2])
   def startgame():
     '''Starts the game'''
-    inpt('There is no game\n')
-
-  def testgame():
-    global questions_wrong,questions_right,score
-    '''A test game to start'''
+    global questions_wrong,questions_right,score,streak,answered
     # Key:
     # 0 - Question number
     # 1 - Question
     # 2 - Answer
     # 3 - Answer List
+    def extrapoint():
+      global score
+      pnt(color("What's this? Looks like you got an extra point! :)",cyan))
+      score = score + 1
     scorelimit        = 20
     score             = 0
     questions_wrong   = 0
     questions_right   = 0
+    answered          = 0
+    streak            = 0
     previousQuestion  = None
     pnt(color('Pre-Game Config',green))
     choice = inpt(color('What score to play to? (Leave empty for default of 20)\n> ',green))
@@ -54,10 +56,11 @@ class Game:
         score = 0
       questionInfo = Util.randQuestion()
       if questionInfo[0] != previousQuestion:
-        response = Util.make(questionInfo[1],questionInfo[2],questionInfo[3],Score=score)
+        response = Util.make(questionInfo[1],questionInfo[2],questionInfo[3],Score=score,Streak=streak,Answered=answered)
         if response == 0:
           questions_wrong = questions_wrong + 1
-          pnt(color('Incorrect :(',red))
+          streak = 0
+          pnt(color('Incorrect :(\nStreak lost',red))
           pnt(color('The correct answer is: ',green)+color(questionInfo[2].upper(),cyan))
           if random.randint(1,1000) == 1:
             pnt(color("What's this? You didn't lose any points! :)",cyan))
@@ -66,17 +69,24 @@ class Game:
             score = score - 1
         if response == 1:
           questions_right = questions_right + 1
+          streak          = streak + 1
+          score           = score  + 1
           pnt(color('Correct!',cyan))
-          if random.randint(1,100) == 1:
-            pnt(color("What's this? Looks like you got an extra point! :)",cyan))
-            score = score + 2
-          else:
-            score = score + 1
+          if streak < 5:
+            if random.randint(1,300) == 1:
+              extrapoint()
+          if streak >= 5 and streak < 10:
+            if random.randint(1,250) == 1:
+              extrapoint()
+          if streak >= 10 and streak < 15:
+            if random.randint(1,200) == 1:
+              extrapoint()
+          if streak >=15 and streak <= 20:
+            if random.randint(1,150) == 1:
+              extrapoint()
+        answered = answered + 1
         inpt(color('Press Enter\n',green))
-        print('Test')
       previousQuestion = questionInfo[0]
-      
-
     clr()
     pnt(color('''Game Finished
 |=====

@@ -22,7 +22,7 @@ from gamelib.shortcode import *
 
 class Util:
   
-  def make(question,answer,answerlist=False,Score=None):
+  def make(question,answer,answerlist=False,Score=None,Streak=None,Answered=None):
     answerinputs  = ['a','b','c','d']
     global response
     '''Makes a question
@@ -35,11 +35,15 @@ class Util:
       while True:
         clr()
         if Score != None:
-          pnt(color('Score: ',green)+color(str(Score),cyan))
+          if Streak != None:
+            pnt(color('Streak:   ',green)+color(str(Streak),yellow))
+          if Answered != None:
+            pnt(color('Answered: ',green)+color(str(Answered),'magenta'))
+          pnt(color('Score:    ',green)+color(str(Score),cyan))
         pnt(color(question+"\n|-----",green))
         for key in answerlist:
           pnt(color('| ',green)+color(key+': '+answerlist[key],yellow)) 
-        userinput = inpt(color('|-----\nPlease type your response below:\n> ',green))
+        userinput = inpt(color('|-----\nPlease type your response below (e.g. "a") and press enter:\n> ',green))
         userinput = userinput.lower()
         if userinput != '':
           if userinput == '1':
@@ -54,7 +58,7 @@ class Util:
             break
     else:
       pnt(color(question,green))
-      userinput = inpt(color('Please type your response below:\n> ',green))
+      userinput = inpt(color('Please type your response below and press enter:\n> ',green))
 
     if userinput == answer:
       response = 1
@@ -73,7 +77,10 @@ class Util:
       QA.q7.list,
       QA.q8.list,
       QA.q9.list,
-      QA.q10.list
+      QA.q10.list,
+      QA.q11.list,
+      QA.q12.list,
+      QA.q13.list
     ]
     list = random.choice(questionList)
     questionInfo = list
@@ -210,5 +217,60 @@ class QA:
       'b':'Organic',
       'c':'Autotrouph',
       'd':'Chloroplast'
+    }
+    list = [num,ques,ans,ans_dict]
+  class q11:
+    num   = '11'
+    ques  = 'What is the product of photosynthesis?'
+    ans   = 'b'
+    ans_dict = {
+      'a':'Glucose and ATP',
+      'b':'O2 and Glucose',
+      'c':'CO2 and H2O',
+      'd':'CO2 and ATP'
+    }
+    list = [num,ques,ans,ans_dict]
+  class q12:
+    num   = '12'
+    ques  = 'The movement of a substance through places and compartments is called...'
+    ans   = 'a'
+    ans_dict = {
+      'a':'Flux',
+      'b':'Step',
+      'c':'Process',
+      'd':'Sink'
+    }
+    list = [num,ques,ans,ans_dict]
+  class q13:
+    num   = '13'
+    ques  = 'A storage place for substances'
+    ans   = 'a'
+    ans_dict = {
+      'a':'Sink',
+      'b':'Lithosphere',
+      'c':'Hydrosphere',
+      'd':'Atmosphere'
+    }
+    list = [num,ques,ans,ans_dict]
+  class q14:
+    num   = ''
+    ques  = ''
+    ans   = ''
+    ans_dict = {
+      'a':'',
+      'b':'',
+      'c':'',
+      'd':''
+    }
+    list = [num,ques,ans,ans_dict]
+  class q15:
+    num   = ''
+    ques  = ''
+    ans   = ''
+    ans_dict = {
+      'a':'',
+      'b':'',
+      'c':'',
+      'd':''
     }
     list = [num,ques,ans,ans_dict]

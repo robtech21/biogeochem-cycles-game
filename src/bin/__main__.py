@@ -38,7 +38,7 @@ while True:
 > ''',green))
   if choice == '1':
     clr()
-    Game.testgame()
+    Game.startgame()
   if choice == '3':
     clr()
     inpt(color('''
@@ -47,9 +47,9 @@ Biogeochemical Cycles Game
 |===================================================|
 |CREDITS:                                           |
 |                                                   |
-|Developer:                          - Robert Furr  |
-|Co-Developer:                       - Cody Dennis  |
-|Writer of questions:                - Ethan Eberly |
+|Robert Furr    - Developer                         |
+|Cody Dennis    - Question Writer                   |
+|Ethan Eberly   - Question Writer and Artist        |
 |===================================================|
 
     License:
