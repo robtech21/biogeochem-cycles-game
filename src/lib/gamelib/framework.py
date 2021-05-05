@@ -89,7 +89,17 @@ class Util:
       QA.q17.list,
       QA.q18.list,
       QA.q19.list,
-      QA.q20.list
+      QA.q20.list,
+      QA.q21.list,
+      QA.q22.list,
+      QA.q23.list,
+      QA.q24.list,
+      QA.q25.list,
+      QA.q26.list,
+      QA.q27.list,
+      QA.q28.list,
+      QA.q29.list,
+      QA.q30.list
     ]
     list = random.choice(questionList)
     questionInfo = list
@@ -338,3 +348,157 @@ class QA:
       'd':'Lithosphere'
     }
     list = [num,ques,ans,ans_dict]
+  class q21:
+    num   = '21'
+    ques  = 'What rock forms from magma below the surface'
+    ans   = 'a'
+    ans_dict = {
+      'a':'Intrusive Igneus Rocks',
+      'b':'Extrusive Igneus Rocks'
+    }
+    list = [num,ques,ans,ans_dict]
+  class q22:
+    num   = '22'
+    ques  = 'What rock is formed when chemical reactions with hot fluids, tremendous heat, and great pressure occur? '
+    ans   = 'b'
+    ans_dict = {
+      'a':'Sedimentary',
+      'b':'Metamorphic',
+      'c':'Divergent',
+      'd':'Volcano'
+    }
+    list = [num,ques,ans,ans_dict]
+  class q23:
+    num   = '23'
+    ques  = 'The ocean is a sink'
+    ans   = 'a'
+    ans_dict = {
+      'a':'True',
+      'b':'False'
+    }
+    list = [num,ques,ans,ans_dict]
+  class q24:
+    num   = '24'
+    ques  = 'Foliated rocks are thin flat metamorphic rocks with layers.'
+    ans   = 'a'
+    ans_dict = {
+      'a':'True',
+      'b':'False'
+    }
+    list = [num,ques,ans,ans_dict]
+  class q25:
+    num   = '25'
+    ques  = 'What is the name for “liquid to solid”?'
+    ans   = 'c'
+    ans_dict = {
+      'a':'Lification',
+      'b':'Melting',
+      'c':'Crystalization',
+      'd':'Erosion'
+    }
+    list = [num,ques,ans,ans_dict]
+  class q26:
+    num   = '26'
+    ques  = 'The process in which loose sediments are cemented together.'
+    ans   = 'b'
+    ans_dict = {
+      'a':'Erosion',
+      'b':'Lification',
+      'c':'Weathering',
+      'd':'Clastic'
+    }
+    list = [num,ques,ans,ans_dict]
+  class q27:
+    num   = '27'
+    ques  = 'MYA means "Million Years Again"'
+    ans   = 'b'
+    ans_dict = {
+      'a':'True',
+      'b':'False'
+    }
+    list = [num,ques,ans,ans_dict]
+  class q28:
+    num   = '28'
+    ques  = 'What occurs at subduction zones?'
+    ans   = 'c'
+    ans_dict = {
+      'a':'Hurricanes',
+      'b':'Folded Mountains',
+      'c':'Volcanoes',
+      'd':'Mid-Ocean Range'
+    }
+    list = [num,ques,ans,ans_dict]
+  class q29:
+    num   = '29'
+    ques  = 'A transformative boundary is when two plates slide past each other.'
+    ans   = 'a'
+    ans_dict = {
+      'a':'True',
+      'b':'False'
+    }
+    list = [num,ques,ans,ans_dict]
+  class q30:
+    num   = '30'
+    ques  = 'What is the partially melted layer below the crust'
+    ans   = 'd'
+    ans_dict = {
+      'a':'Atmosphere',
+      'b':'Lithosphere',
+      'c':'Rocksphere',
+      'd':'Asthenosphere'
+    }
+    list = [num,ques,ans,ans_dict]
+  class q31:
+    num   = '31'
+    ques  = 'What happens when a divergent boundary even occurs?'
+    ans   = 'c'
+    ans_dict = {
+      'a':'Volcanoes',
+      'b':'Trench',
+      'c':'Hurricane',
+      'd':'Sea Floor Spreading'
+    }
+    list = [num,ques,ans,ans_dict]
+  class q32:
+    num   = '32'
+    ques  = 'What can earthquakes cause? They may affect people and communities.'
+    ans   = 'b'
+    ans_dict = {
+      'a':'Mountains',
+      'b':'Tsunamis',
+      'c':'Sedimentary Rocks',
+      'd':'Lithosphere'
+    }
+    list = [num,ques,ans,ans_dict]
+  class q33:
+    num   = '33'
+    ques  = 'What happens when two tectonic plates slide past each other?'
+    ans   = 'b'
+    ans_dict = {
+      'a':'Volcanoes',
+      'b':'Earthquakes',
+      'c':'Igneous',
+      'd':'Mid-Ocean Range'
+    }
+    list = [num,ques,ans,ans_dict]
+  class q34:
+    num   = '34'
+    ques  = 'What is the name for the industrial process in which ammonia is produced from nitrogen and hydrogen?'
+    ans   = 'b'
+    ans_dict = {
+      'a':'Nitrogen Uptake',
+      'b':'Haber Process',
+      'c':'Legume',
+      'd':'Ammonification'
+    }
+    list = [num,ques,ans,ans_dict]
+  class q35:
+    num   = '35'
+    ques  = 'What is Mineral Apatite?'
+    ans   = ''
+    ans_dict = {
+      'a':'Phosphorus Rich Mineral',
+      'b':'Metamorphic',
+      'c':'Decomposition',
+      'd':'ATP'
+    }
