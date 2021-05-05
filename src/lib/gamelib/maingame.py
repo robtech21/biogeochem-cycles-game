@@ -91,6 +91,7 @@ class Game:
     pnt(color('''Game Finished
 |=====
 |Stats:''',green))
-    pnt(color('|',green)+color('Questions Wrong: '+str(questions_wrong),red))
-    pnt(color('|',green)+color('Questions Right: '+str(questions_right),cyan))
+    pnt(color('|',green)+color('Questions Wrong:    '+str(questions_wrong),red))
+    pnt(color('|',green)+color('Questions Right:    '+str(questions_right),cyan))
+    pnt(color('|',green)+color('Questions Answered: '+str(answered),'magenta'))
     inpt(color('|=====\nPress enter to go to title\n',green))

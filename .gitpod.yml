@@ -3,3 +3,4 @@ vscode:
   extensions:
     - github.vscode-pull-request-github
     - ms-python.python
+    - davidanson.vscode-markdownlint

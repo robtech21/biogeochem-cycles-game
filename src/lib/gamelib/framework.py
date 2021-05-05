@@ -21,14 +21,16 @@ from gamelib.shortcode import *
 
 
 class Util:
-  
+  '''Utility Class'''
   def make(question,answer,answerlist=False,Score=None,Streak=None,Answered=None):
     answerinputs  = ['a','b','c','d']
     global response
     '''Makes a question
     question    - Value or string with the question
     answer      - The string that is the answer
-    answerlist  - Shows an answer list if used (optional)'''
+    answerlist  - Displays an answer list (optional)
+    Score       - Displays a score counter (optional)
+    Streak      - Displays a streak counter (optional)'''
   
     if answerlist != False:
 
@@ -80,7 +82,14 @@ class Util:
       QA.q10.list,
       QA.q11.list,
       QA.q12.list,
-      QA.q13.list
+      QA.q13.list,
+      QA.q14.list,
+      QA.q15.list,
+      QA.q16.list,
+      QA.q17.list,
+      QA.q18.list,
+      QA.q19.list,
+      QA.q20.list
     ]
     list = random.choice(questionList)
     questionInfo = list
@@ -253,24 +262,79 @@ class QA:
     }
     list = [num,ques,ans,ans_dict]
   class q14:
-    num   = ''
-    ques  = ''
-    ans   = ''
+    num   = '14'
+    ques  = 'The partitioning and cycling of chemical elements and compounds between parts of an ecosystem.'
+    ans   = 'a'
     ans_dict = {
-      'a':'',
-      'b':'',
-      'c':'',
-      'd':''
+      'a':'Biogeochemical Cycle',
+      'b':'The Rock Cycle',
+      'c':'The Water Cycle',
+      'd':'The Nitrogen Cycle'
     }
     list = [num,ques,ans,ans_dict]
   class q15:
-    num   = ''
-    ques  = ''
-    ans   = ''
+    num   = '15'
+    ques  = 'The chemicals we find under the ground that are made from remains of past living things.'
+    ans   = 'b'
     ans_dict = {
-      'a':'',
-      'b':'',
-      'c':'',
-      'd':''
+      'a':'Ammonium',
+      'b':'Fossil Fuels',
+      'c':'Acid',
+      'd':'Unfix Nitrogen'
+    }
+    list = [num,ques,ans,ans_dict]
+  class q16:
+    num   = '16'
+    ques  = 'Most abundant gas in the atmosphere?'
+    ans   = 'c'
+    ans_dict = {
+      'a':'Carbon Dioxide',
+      'b':'Oxygen',
+      'c':'Nitrogen',
+      'd':'Argon'
+    }
+    list = [num,ques,ans,ans_dict]
+  class q17:
+    num   = '17'
+    ques  = 'Which one is "Abiotic"?'
+    ans   = 'b'
+    ans_dict = {
+      'a':'Fish',
+      'b':'Rock',
+      'c':'Dog',
+      'd':'Kangaroo'
+    }
+    list = [num,ques,ans,ans_dict]
+  class q18:
+    num   = '18'
+    ques  = 'What word describes "occurring and reoccurring"?'
+    ans   = 'a'
+    ans_dict = {
+      'a':'Constants',
+      'b':'Products',
+      'c':'Reactants',
+      'd':'Flux'
+    }
+    list = [num,ques,ans,ans_dict]
+  class q19:
+    num   = '19'
+    ques  = 'What is the name of the ecosystem made up of parts of Earth made out of water like oceans and rivers?'
+    ans   = 'd'
+    ans_dict = {
+      'a':'Biosphere',
+      'b':'Lithosphere',
+      'c':'Atmosphere',
+      'd':'Hydrosphere'
+    }
+    list = [num,ques,ans,ans_dict]
+  class q20:
+    num   = '20'
+    ques  = 'What is the name of the ecosystem made up of living things like plants and animals?'
+    ans   = 'a'
+    ans_dict = {
+      'a':'Biosphere',
+      'b':'Atmosphere',
+      'c':'Biochemical Sphere',
+      'd':'Lithosphere'
     }
     list = [num,ques,ans,ans_dict]
