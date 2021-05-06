@@ -34,6 +34,12 @@
 
 <hr>
 
+### *CO2 Cycle**
+
+![co2 cycle](carboncycle.png)
+
+<hr>
+
 ### **Extra**
 
 [Development Log (For teacher viewing)](devlog.md)
