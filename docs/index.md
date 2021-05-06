@@ -22,6 +22,18 @@
 
 <hr>
 
+### **Nitrogen Cycle**
+
+![nitrogen cycle](nitrogencycle.png)
+
+<hr>
+
+### **Phosphorus Cycle**
+
+![phosphorus cycle](phosphoruscycle.png)
+
+<hr>
+
 ### **Extra**
 
 [Development Log (For teacher viewing)](devlog.md)
