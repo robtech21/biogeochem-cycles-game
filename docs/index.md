@@ -34,7 +34,7 @@
 
 <hr>
 
-### *CO2 Cycle**
+### **CO2 Cycle**
 
 ![co2 cycle](carboncycle.png)
 
