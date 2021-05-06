@@ -471,7 +471,7 @@ class QA:
   class q31:
     num   = '31'
     ques  = 'What happens when a divergent boundary even occurs?'
-    ans   = 'd'
+    ans   = 'c'
     ans_dict = {
       'a':'Volcanoes',
       'b':'Trench',
