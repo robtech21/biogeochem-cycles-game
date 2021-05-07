@@ -526,7 +526,7 @@ class QA:
   class q36:
     num   = '36'
     ques  = 'When sea ice melts it changes the water level'
-    ans   = 'b'
+    ans   = 'a'
     ans_dict = {
       'a':'True',
       'b':'False'
@@ -659,8 +659,7 @@ class QA:
     ans_dict = {
       'a':'Lava',
       'b':'Still called magma',
-      'c':'Hot stuff',
-      'd':'Igneous'
+      'c':'Hot stuff'
     }
     list = [num,ques,ans,ans_dict]
   class q50:

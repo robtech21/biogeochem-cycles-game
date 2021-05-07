@@ -48,7 +48,7 @@ Biogeochemical Cycles Game
 |CREDITS:                                           |
 |                                                   |
 |Robert Furr    - Developer                         |
-|Cody Dennis    - Question Writer                   |
+|Cody Dennis    - Question Writer and Artist        |
 |Ethan Eberly   - Question Writer and Artist        |
 |===================================================|
 
